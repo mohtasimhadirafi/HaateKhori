@@ -47,14 +47,14 @@ body{
 .banner p{
     -webkit-text-fill-color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 40px;
+    font-size: 30px;
     margin-top: 0px;
     margin-bottom: 0px;
 }
 
 .banner a{
     margin-top: 0px;
-    font-size: 40px;
+    font-size: 30px;
     position: absolute;
     text-decoration: none;
     color: white;
