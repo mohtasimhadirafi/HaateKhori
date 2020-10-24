@@ -7,6 +7,54 @@
         <link rel="stylesheet" href="{% static 'css/writing.css' %}">
     </head>
     <body>
+        <div class="menubar">
+            <a href="#">Contact Us</a>
+            <a href="{% url 'about' %}">About</a>
+            <a href="{% url 'features' %}">Let's Learn</a>
+            <a href="{% url 'index' %}">Home</a>
+        </div>
+
+        <table>
+            <tr>
+                <td>
+                    <div class="canvas">
+                        <canvas id="draw"></canvas>
+                        <style>
+                            canvas{
+                                background-color: white;
+                            }
+                        </style>
+                    </div>
+                </td>
+                <td>
+                    <div class="dropdown">
+                        <button class="dropbtn">Learning Level: 0</button>
+                        <div class="dropdown-content">
+                            <a href="#">English Character</a>
+                            <a href="#">English Number</a>
+                            <a href="#">বাংলা অক্ষর</a>
+                            <a href="#">বাংলা সংখ্যা</a>
+                        </div>
+                        <button class="dropbtn">Learning Level: 1</button>
+                        <div class="dropdown-content">
+                            <a href="#">English Character</a>
+                            <a href="#">English Number</a>
+                            <a href="#">বাংলা অক্ষর</a>
+                            <a href="#">বাংলা সংখ্যা</a>
+                        </div>
+                        <button class="dropbtn">Learning Level: 2</button>
+                        <div class="dropdown-content">
+                            <a href="#">English Character</a>
+                            <a href="#">English Number</a>
+                            <a href="#">বাংলা অক্ষর</a>
+                            <a href="#">বাংলা সংখ্যা</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="{% static 'js/writing.js' %}"></script>
         <div class="top-bar">
             <button id="save-btn">Save</button>
             <button id="undo-btn">Undo</button>
@@ -14,10 +62,5 @@
             <input type="color" id="color-picker">
             <input type="range" id="brush-size" min="1" max="50" value="10">
         </div>
-
-        <canvas id="draw"></canvas>
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-        <script src="{% static 'js/writing.js' %}"></script>
     </body>
 </html>

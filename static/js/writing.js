@@ -33,6 +33,8 @@ function init() {
         height: window.innerHeight,
     });
     ctx = canvas[0].getContext('2d');
+    canvas[0].width = 1200;
+    canvas[0].height = 600;
 
     function mouseEvent(e) {
         brush.x = e.pageX;
