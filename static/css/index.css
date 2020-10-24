@@ -65,12 +65,18 @@ body{
     background-origin: border-box;
     background-clip: content-box, border-box;
 }
+
 .banner span{
     display: block;
     padding: 8px;
 }
 
+.banner ul{
+    font-size: 15px;
+    color: white;
+}
+
 @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+    .menubar {padding-top: 15px;}
+    .menubar a {font-size: 18px;}
 }
