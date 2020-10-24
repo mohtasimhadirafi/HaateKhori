@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <meta charset="utf-8">
+    <title>HaateKhori</title>
+</head>
+<body>
+    <div class="menubar">
+        <a href="#">Contact Us</a>
+        <a class="active" href="#">About</a>
+        <a href="#">Let's Learn</a>
+        <a href="{% url 'index' %}">Home</a>
+    </div>
+    <div class="banner">
+        <h2>The Team</h2>
+        <ul>
+            <li>Mohtasim Hadi Rafi</li>
+            <ul>
+                <li>ID: 180042145</li>
+                <li>BSc Engg in Software Engineering</li>
+                <li>Dept of CSE</li>
+                <li>Islamic University of Technology</li>
+            </ul>
+            <li>MD Sabbir Rahman</li>
+            <ul>
+                <li>ID: 180042142</li>
+                <li>BSc Engg in Software Engineering</li>
+                <li>Dept of CSE</li>
+                <li>Islamic University of Technology</li>
+            </ul>
+            <li>Ratul Mahjabin</li>
+            <ul>
+                <li>ID: 180042123</li>
+                <li>BSc Engg in Software Engineering</li>
+                <li>Dept of CSE</li>
+                <li>Islamic University of Technology</li>
+            </ul>
+        </ul>
+    </div>
+
+</body>
+</html>

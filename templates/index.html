@@ -1,15 +1,15 @@
-{% load static %}
 <!DOCTYPE html>
+{% load static %}
 <html>
     <head>
-        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/index.css' %}">
         <meta charset="utf-8">
         <title>HaateKhori</title>
     </head>
     <body>
         <div class="menubar">
             <a href="#">Contact Us</a>
-            <a href="#">About</a>
+            <a href="{% url 'about' %}">About</a>
             <a href="#">Let's Learn</a>
             <a class="active" href="#home">Home</a>
         </div>
