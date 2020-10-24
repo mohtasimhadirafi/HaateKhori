@@ -11,3 +11,7 @@ def about(request):
 
 def features(request):
     return render(request, 'features.html')
+
+
+def writing(request):
+    return render(request, 'writing.html')
