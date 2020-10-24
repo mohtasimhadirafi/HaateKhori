@@ -9,7 +9,7 @@ var canvas, ctx,
     strokes = [],
     currentStroke = null;
 
-function redraw () {
+function redraw() {
     ctx.clearRect(0, 0, canvas.width(), canvas.height());
     ctx.lineCap = 'round';
     for (var i = 0; i < strokes.length; i++) {
@@ -26,7 +26,7 @@ function redraw () {
     }
 }
 
-function init () {
+function init() {
     canvas = $('#draw');
     canvas.attr({
         width: window.innerWidth,
@@ -34,7 +34,7 @@ function init () {
     });
     ctx = canvas[0].getContext('2d');
 
-    function mouseEvent (e) {
+    function mouseEvent(e) {
         brush.x = e.pageX;
         brush.y = e.pageY;
 
@@ -44,6 +44,14 @@ function init () {
         });
 
         redraw();
+    }
+
+    function downloadImage(data, filename = 'untitled.png') {
+        var a = document.createElement('a');
+        a.href = data;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
     }
 
     canvas.mousedown(function (e) {
@@ -70,7 +78,8 @@ function init () {
     });
 
     $('#save-btn').click(function () {
-        window.open(canvas[0].toDataURL());
+        var image = canvas[0].toDataURL("image/png").replace("image/png", "image/octet-stream");
+        downloadImage(image, 'my-canvas.png')
     });
 
     $('#undo-btn').click(function () {
