@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'css/features.css' %}">
+    <meta charset="UTF-8">
+    <title>Haate Khori</title>
+</head>
+<body>
+    <div class="menubar">
+        <a href="#">Contact Us</a>
+        <a href="{% url 'about' %}">About</a>
+        <a class="active" href="#">Let's Learn</a>
+        <a href="{% url 'index' %}">Home</a>
+    </div>
+
+</body>
+</html>
