@@ -11,25 +11,6 @@ body{
     overflow: hidden;
 }
   
-.menubar a {
-    float: right;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
-  
-.menubar a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-.menubar a.active{
-    background-color: orange;
-    color: white;
-}
-  
 .banner {
     margin-left: 60px;
     margin-top: 170px;
@@ -61,7 +42,7 @@ body{
     cursor: pointer;
     border: 2px solid transparent;
     border-radius: 40px;
-    background-image: radial-gradient(circle at top left, orange, transparent);
+    background-image: radial-gradient(circle at top left, orange, orange);
     background-origin: border-box;
     background-clip: content-box, border-box;
 }
@@ -74,9 +55,4 @@ body{
 .banner ul{
     font-size: 15px;
     color: white;
-}
-
-@media screen and (max-height: 450px) {
-    .menubar {padding-top: 15px;}
-    .menubar a {font-size: 18px;}
 }
