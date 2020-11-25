@@ -12,7 +12,9 @@ body{
 }
   
 .banner {
-
+    width: 95%;
+    margin-left: 10px;
+   
 }
 
 .banner h1{
