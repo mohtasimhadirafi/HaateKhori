@@ -15,3 +15,6 @@ def features(request):
 
 def writing(request):
     return render(request, 'writing.html')
+
+def infouser(request):
+    return render(request,'info_user.html')
