@@ -14,7 +14,7 @@ body{
 .banner {
     width: 95%;
     margin-left: 10px;
-   
+
 }
 
 .banner h1{
@@ -26,6 +26,7 @@ body{
     position: relative;
     top: 100px;
     left: 50px;
+    opacity: .9;
 }
 
 .banner p{
