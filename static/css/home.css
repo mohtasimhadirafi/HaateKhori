@@ -5,3 +5,15 @@ body{
     -o-background-size: cover;
     background-size: cover;
 }
+
+.features {
+
+}
+
+
+.features table{
+    border-color: yellow;
+    position: relative;
+    left: -20px;
+}
+

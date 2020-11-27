@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'css/menubar.css' %}">
+    <meta charset="UTF-8">
+    <title>Haate Khori</title>
+</head>
+
+<body>
+<div class="menubar">
+    <a href="#">Contact Us</a>
+    <a href="{% url 'about' %}">About</a>
+    <a class="active" href="#">Start Learning</a>
+    <a href="{% url 'index' %}">Home</a>
+</div>
+<div class="features" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+    <img id="bird" src="/static/img/home_left.png" width="500">
+    <div>
+        <table border="2">
+            <tr>
+                <td>
+                    <img src="/static/img/write_menu.png" width="250">
+                </td>
+                <td>
+                    <img src="/static/img/know_surroundings.png" width="250">
+                </td>
+                <td>
+                    <img src="/static/img/write_menu.png" width="250">
+                </td>
+                <td>
+                    <img src="/static/img/write_menu.png" width="250">
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+</body>
+
+</html>
