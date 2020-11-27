@@ -48,9 +48,10 @@
 <div>
     <table id="settings_menu" cellspacing="0" cellpadding="0">
         <tr align="center">
-            <td><img src="/static/img/settings_home.png" width="50%"></td>
-            <td><img src="/static/img/resource_menu.png" width="45%"></td>
-            <td><img src="/static/img/help_menu.png" width="45%"></td>
+
+            <td><a href="{% url 'settings' %}"><img src="/static/img/settings_home.png" width="50%"></a></td>
+            <td><a href="{% url 'add_resource' %}"><img src="/static/img/resource_menu.png" width="45%"></a></td>
+            <td><a href="{% url 'help' %}"><img src="/static/img/help_menu.png" width="45%"></a></td>
         </tr>
     </table>
 </div>
