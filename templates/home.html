@@ -13,29 +13,46 @@
 <div class="menubar">
     <a href="#">Contact Us</a>
     <a href="{% url 'about' %}">About</a>
-    <a class="active" href="#">Start Learning</a>
-    <a href="{% url 'index' %}">Home</a>
+    <a href="#">My Profile</a>
+    <a href="#">Know You</a>
+    <a href="#">Know Your Surroundings</a>
+    <a href="{% url 'writing' %}">Learn To Write</a>
+    <a class="active" href="#">Home</a>
 </div>
 <div class="features" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
-    <img id="bird" src="/static/img/home_left.png" width="500">
+    <img id="bird" src="/static/img/home_left.png" width="450">
     <div>
-        <table border="2">
+        <table>
             <tr>
                 <td>
-                    <img src="/static/img/write_menu.png" width="250">
+                    <a href="{% url 'writing' %}"> <img src="/static/img/write_menu.png" width="250"></a>
+
                 </td>
                 <td>
                     <img src="/static/img/know_surroundings.png" width="250">
                 </td>
                 <td>
-                    <img src="/static/img/write_menu.png" width="250">
+                    <img src="/static/img/know_you.png" width="250">
                 </td>
                 <td>
-                    <img src="/static/img/write_menu.png" width="250">
+                    <img src="/static/img/my_profile.png" width="250">
                 </td>
             </tr>
         </table>
     </div>
+</div>
+<div>
+    <p id="name">Hey ZAYMA</p>
+    <p id="welcome">Welcome Champ !!!</p>
+</div>
+<div>
+    <table id="settings_menu" cellspacing="0" cellpadding="0">
+        <tr align="center">
+            <td><img src="/static/img/settings_home.png" width="50%"></td>
+            <td><img src="/static/img/resource_menu.png" width="45%"></td>
+            <td><img src="/static/img/help_menu.png" width="45%"></td>
+        </tr>
+    </table>
 </div>
 
 </body>
