@@ -11,9 +11,9 @@
 
 <body>
 <div class="menubar">
-    <a href="#">Contact Us</a>
+    <a href="{% url 'contact_us' %}">Contact Us</a>
     <a href="{% url 'about' %}">About</a>
-    <a href="#">My Profile</a>
+    <a href="{% url 'my_profile' %}">My Profile</a>
     <a href="{% url 'know_you' %}">Know You</a>
     <a href="{% url 'surroundings' %}">Know Your Surroundings</a>
     <a href="{% url 'writing' %}">Learn To Write</a>
@@ -34,7 +34,8 @@
                     <a href="{% url 'know_you' %}"><img src="/static/img/know_you.png" width="250"></a>
                 </td>
                 <td>
-                    <img src="/static/img/my_profile.png" width="250">
+                    <a href="{% url 'my_profile' %}"><img src="/static/img/my_profile.png" width="250"></a>
+
                 </td>
             </tr>
         </table>

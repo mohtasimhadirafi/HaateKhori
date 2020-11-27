@@ -24,3 +24,9 @@ def surroundings(request):
 
 def know_you(request):
     return render(request,'know_you.html')
+
+def my_profile(request):
+    return render(request,'my_profile.html')
+
+def contact_us(request):
+    return render(request,'contact_us.html')
