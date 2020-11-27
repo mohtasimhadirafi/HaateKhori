@@ -1,0 +1,69 @@
+body {
+    background-color: black;
+    overflow: hidden;
+}
+
+.left {
+
+     background: url('/static/img/lamb.png') no-repeat;
+     width: 409px;
+     height: 442px;
+     float: left;
+     top: 120px;
+     left: 30px;
+     position: relative;
+     color: #dddddd;
+}
+
+.left h1{
+    color: white;
+    position: relative;
+    top: 430px;
+    left: 125px;
+}
+
+
+
+.right {
+    float: right;
+    width: 55%;
+    margin-right: 80px;
+    margin-top: 0px;
+    position: relative;
+    display: inline-block;
+    top: -40px;
+}
+
+.right h2 {
+    position: relative;
+    text-align: center;
+    color: aqua;
+    opacity: .8;
+    top: 130px;
+    left: 70px;
+    font-size: x-large;
+}
+
+.right table{
+    color: yellow;
+    position: relative;
+    top: -500px;
+    left: 200px;
+    font-size: large;
+}
+
+#submit{
+    background-color: darkcyan;
+    color: white;
+    font-style: oblique;
+    opacity: .8;
+    position: relative;
+    left: 850px;
+    top: 650px;
+    font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+    padding: 5px 40px 5px 40px ;
+    font-size: large;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px white;
+}

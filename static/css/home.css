@@ -1,0 +1,53 @@
+body{
+    background: url('/static/img/main_back.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.features {
+    position: relative;
+    top: 50px;
+}
+
+#bird {
+    position: relative;
+    left: -30px;
+    top: -30px;
+
+}
+
+
+.features table{
+    border-color: yellow;
+    position: relative;
+    left: -50px;
+}
+
+#name {
+    color: white;
+    position: relative;
+    top: 1px;
+    left: 150px;
+    font-size: xx-large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    opacity: .9;
+}
+
+#welcome {
+    color: aqua;
+    position: relative;
+    top: -20px;
+    left: 135px;
+    font-size: x-large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#settings_menu {
+    float: right;
+    position: relative;
+    top: -50px;
+    left: -20px;
+}

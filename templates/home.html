@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'css/menubar.css' %}">
+    <meta charset="UTF-8">
+    <title>Haate Khori</title>
+</head>
+
+<body>
+<div class="menubar">
+    <a href="{% url 'contact_us' %}">Contact Us</a>
+    <a href="{% url 'about' %}">About</a>
+    <a href="{% url 'my_profile' %}">My Profile</a>
+    <a href="{% url 'know_you' %}">Know You</a>
+    <a href="{% url 'surroundings' %}">Know Your Surroundings</a>
+    <a href="{% url 'writing' %}">Learn To Write</a>
+    <a class="active" href="#">Home</a>
+</div>
+<div class="features" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+    <img id="bird" src="/static/img/home_left.png" width="450">
+    <div>
+        <table>
+            <tr>
+                <td>
+                    <a href="{% url 'writing' %}"> <img src="/static/img/write_menu.png" width="250"></a>
+                </td>
+                <td>
+                    <a href="{% url 'surroundings' %}"><img src="/static/img/know_surroundings.png" width="250"></a>
+                </td>
+                <td>
+                    <a href="{% url 'know_you' %}"><img src="/static/img/know_you.png" width="250"></a>
+                </td>
+                <td>
+                    <a href="{% url 'my_profile' %}"><img src="/static/img/my_profile.png" width="250"></a>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div>
+    <p id="name">Hey ZAYMA</p>
+    <p id="welcome">Welcome Champ !!!</p>
+</div>
+<div>
+    <table id="settings_menu" cellspacing="0" cellpadding="0">
+        <tr align="center">
+
+            <td><a href="{% url 'settings' %}"><img src="/static/img/settings_home.png" width="50%"></a></td>
+            <td><a href="{% url 'add_resource' %}"><img src="/static/img/resource_menu.png" width="45%"></a></td>
+            <td><a href="{% url 'help' %}"><img src="/static/img/help_menu.png" width="45%"></a></td>
+        </tr>
+    </table>
+</div>
+
+</body>
+
+</html>
