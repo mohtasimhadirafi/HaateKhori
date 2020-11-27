@@ -18,3 +18,9 @@ def writing(request):
 
 def infouser(request):
     return render(request,'info_user.html')
+
+def surroundings(request):
+    return render(request,'know_your_surroundings.html')
+
+def know_you(request):
+    return render(request,'know_you.html')
