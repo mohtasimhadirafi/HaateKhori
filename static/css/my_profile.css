@@ -1,6 +1,6 @@
-body {
+body{
     background-color: black;
-
+    overflow: hidden;
 }
 
 .main {
@@ -33,20 +33,8 @@ body {
     top: 280px;
 }
 
-#shape-active-btn{
+.graph{
+    padding: 10px;
     position: relative;
-    top: -470px;
-    left: 40px;
-}
-#object-btn{
-    position: relative;
-    top: -512.5px;
-    left: 150px;
-}
-
-.shape-level0{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
+    top: 100px;
 }
