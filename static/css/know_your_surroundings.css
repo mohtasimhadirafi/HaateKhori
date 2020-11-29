@@ -50,3 +50,27 @@ body {
     justify-content: center;
     align-content: center;
 }
+
+#select-back{
+    position: relative;
+    top: -430px;
+    left: -1px;
+}
+
+#learn-select-active{
+    position: relative;
+    top: -530px;
+    left: 20px;
+}
+
+#identify-select{
+    position: relative;
+    top: -520px;
+    left: 20px;
+}
+
+#shape-level1{
+    position: relative;
+    top: -480px;
+    left: -10px;
+}
