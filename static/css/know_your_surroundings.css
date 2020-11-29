@@ -67,10 +67,24 @@ body {
     position: relative;
     top: -520px;
     left: 20px;
+    opacity: .8;
+
+}
+
+#identify-select:hover{
+    opacity: 1;
+    width: 150px;
 }
 
 #shape-level1{
     position: relative;
     top: -480px;
-    left: -10px;
+    left: -8px;
+    opacity: .8;
+}
+
+#shape-level1:hover{
+    opacity: 1;
+    width: 320px;
+    left: -16px;
 }
