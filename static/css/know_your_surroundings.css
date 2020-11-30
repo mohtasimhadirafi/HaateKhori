@@ -1,6 +1,6 @@
 body {
     background-color: black;
-
+    overflow: hidden;
 }
 
 .main {
@@ -42,6 +42,12 @@ body {
     position: relative;
     top: -512.5px;
     left: 150px;
+    opacity: .8;
+}
+
+#object-btn:hover{
+    opacity: 1;
+    
 }
 
 .shape-level0{
