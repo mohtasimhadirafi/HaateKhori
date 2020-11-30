@@ -1,10 +1,32 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
+
 <head>
+    <link rel="stylesheet" href="{% static 'css/know_you.css' %}">
+    <link rel="stylesheet" href="{% static 'css/menubar.css' %}">
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Haate Khori</title>
 </head>
 <body>
-    <h1>Hello from know your know you</h1>
+<div class="menubar">
+    <a href="{% url 'contact_us' %}">Contact Us</a>
+    <a href="{% url 'about' %}">About</a>
+    <a href="{% url 'my_profile' %}">My Profile</a>
+    <a class="active" href="#">Know You</a>
+    <a href="{% url 'surroundings' %}">Know Your Surroundings</a>
+    <a href="{% url 'writing' %}">Learn To Write</a>
+    <a href="{% url 'home' %}">Home</a>
+</div>
+<img id="label" src="/static/img/shape_level0_label.png" width="30%">
+<div class="main">
+    <div id="shape-level0">
+        <img id="sub-menu" src="/static/img/know_you_level0.png" width="70%">
+
+    </div>
+    <img id="shape-back" src="/static/img/know_you_level0_img1_eye.png" width="900" height="500">
+    <img id="shape-next-btn" src="/static/img/shape_next_btn.png" width="70" height="70">
+</div>
+
 </body>
 </html>
