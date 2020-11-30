@@ -56,9 +56,6 @@ function init() {
             x: brush.x,
             y: brush.y,
         });
-
-
-
         redraw();
     }
 
