@@ -23,11 +23,12 @@
     <div class="shape-level0">
         <img id="sub-menu" src="/static/img/know_your_surroundings_shape_level0.png" width="70%">
         <img id="shape-active-btn" src="/static/img/shape_active_btn.png" width="100">
-        <img id="object-btn" src="/static/img/object_btn.png" width="80">
+        <a href="{% url 'object_level0_learn' %}"><img id="object-btn" src="/static/img/object_btn.png" width="80"></a>
         <img id="select-back" src="/static/img/know_your_surroundings_level0_black.png" width="300">
         <img id="learn-select-active" src="/static/img/learn_option_active.png" width="140">
         <a href="{% url 'surroundings_shape_level0_identify' %}"><img id="identify-select" src="/static/img/identify_option.png" width="140"></a>
-        <img id="shape-level1" src="/static/img/shape_level1_option_submenu.png" width="300">
+        <a href="{% url 'shape_level1_learn' %}"><img id="shape-level1" src="/static/img/shape_level1_option_submenu.png" width="300"></a>
+
     </div>
     <img id="shape-back" src="/static/img/shape_line_img_background.png" width="900" height="500">
     <img id="shape-next-btn" src="/static/img/shape_next_btn.png" width="70" height="70">

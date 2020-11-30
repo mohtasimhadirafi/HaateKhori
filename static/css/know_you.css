@@ -25,10 +25,35 @@ body{
 #sub-menu{
     position: relative;
     top: -40px;
-    left: -20px;
+    left: 20px;
 }
 
 #shape-next-btn{
     position: relative;
     top: 280px;
+}
+
+#select-back{
+    position: relative;
+    top: -353px;
+    left: 45px;
+}
+
+#learn-select-active{
+    position: relative;
+    top: -430px;
+    left: -230px;
+}
+
+#identify-select{
+    position: relative;
+    top: -420px;
+    left: 74px;
+    opacity: .8;
+
+}
+
+#identify-select:hover{
+    opacity: 1;
+    width: 150px;
 }
