@@ -1,0 +1,40 @@
+body{
+    background-color: black;
+    overflow: hidden;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+
+#label {
+    position: relative;
+    left: 700px;
+    top: 20px;
+}
+
+#shape-back{
+    position: relative;
+    top: 70px;
+    left: -50px;
+}
+
+#sub-menu{
+    position: relative;
+    top: -40px;
+    left: -20px;
+}
+
+#shape-next-btn{
+    position: relative;
+    top: 280px;
+}
+
+.graph{
+    padding: 10px;
+    position: relative;
+    top: 100px;
+}

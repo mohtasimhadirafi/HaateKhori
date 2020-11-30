@@ -2,8 +2,8 @@ var canvas, ctx,
     brush = {
         x: 0,
         y: 0,
-        color: '#000000',
-        size: 10,
+        color: '#ffffff',
+        size: 20,
         down: false,
     },
     strokes = [],
@@ -26,6 +26,13 @@ function redraw() {
     }
 }
 
+
+function erase() {
+    console.log("Hit");
+    console.log(brush.x);
+
+}
+
 function init() {
     canvas = $('#draw');
     canvas.attr({
@@ -33,12 +40,14 @@ function init() {
         height: window.innerHeight,
     });
     ctx = canvas[0].getContext('2d');
-    canvas[0].width = 1200;
-    canvas[0].height = 600;
+    canvas[0].width = 1000;
+    canvas[0].height = 530;
 
     function mouseEvent(e) {
-        brush.x = e.pageX;
-        brush.y = e.pageY;
+        brush.x = e.pageX-430;
+        brush.y = e.pageY-190;
+
+        console.log("Mousedown event");
 
         currentStroke.points.push({
             x: brush.x,
@@ -60,7 +69,7 @@ function init() {
         brush.down = true;
 
         currentStroke = {
-            color: brush.color,
+            color: "#ffffff",
             size: brush.size,
             points: [],
         };
@@ -92,6 +101,10 @@ function init() {
     $('#clear-btn').click(function () {
         strokes = [];
         redraw();
+    });
+
+    $('#erase-btn').click(function () {
+        erase();
     });
 
     $('#color-picker').on('input', function () {
