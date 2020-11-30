@@ -20,10 +20,13 @@ function redraw() {
         ctx.moveTo(s.points[0].x, s.points[0].y);
         for (var j = 0; j < s.points.length; j++) {
             var p = s.points[j];
+
             ctx.lineTo(p.x, p.y);
         }
+
         ctx.stroke();
     }
+     //console.log(s.points);
 }
 
 
@@ -53,6 +56,8 @@ function init() {
             x: brush.x,
             y: brush.y,
         });
+
+
 
         redraw();
     }

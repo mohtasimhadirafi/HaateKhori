@@ -1,10 +1,21 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <title>Haate Khori</title>
+    <link rel="stylesheet" href="{% static 'css/contact_us.css' %}">
+    <link rel="stylesheet" href="{% static 'css/menubar.css' %}">
 </head>
 <body>
-    <h1>Hello from contact us</h1>
+    <div class="menubar">
+    <a class="active" href="#">Contact Us</a>
+    <a href="{% url 'about' %}">About</a>
+    <a href="{% url 'my_profile' %}">My Profile</a>
+    <a href="{% url 'know_you' %}">Know You</a>
+    <a href="{% url 'surroundings' %}">Know Your Surroundings</a>
+    <a href="{% url 'writing' %}">Learn To Write</a>
+    <a href="{% url 'home' %}">Home</a>
+</div>
 </body>
 </html>
