@@ -19,8 +19,17 @@ def writing_level0(request):
 def writing_level1(request):
     return render(request, 'writing_level1.html')
 
+
 def writing_level2(request):
     return render(request, 'writing_level2.html')
+
+
+def add_image_know_you(request):
+    return render(request, 'add_image_know_you.html')
+
+
+def know_you_level1(request):
+    return render(request, 'know_you_level1.html')
 
 
 def infouser(request):
