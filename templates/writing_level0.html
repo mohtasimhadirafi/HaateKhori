@@ -17,7 +17,7 @@
     <a href="{% url 'know_you' %}">Know You</a>
     <a href="{% url 'surroundings' %}">Know Your Surroundings</a>
     <a class="active" href="#">Learn To Write</a>
-    <a href="{% url 'home' %}">Home</a>
+    <a href="{% url 'english_number' %}">Home</a>
 </div>
 <div class="canvas">
     <canvas id="draw"></canvas>
@@ -40,15 +40,15 @@
         <span class="checkmark"></span>
     </label>
     <label class="container">English Number
-        <input type="radio" name="radio">
+        <input type="button" name="radio" onclick="goToEnglishNumber()">
         <span class="checkmark"></span>
     </label>
     <label class="container">বাংলা অক্ষর
-        <input type="radio" name="radio">
+        <input type="radio" name="radio" onclick="goToBanglaCharecter()">
         <span class="checkmark"></span>
     </label>
     <label class="container">বাংলা সংখ্যা
-        <input type="radio" name="radio">
+        <input type="radio" name="radio" onclick="goToBanglaNumber()">
         <span class="checkmark"></span>
     </label>
 </div>
@@ -56,6 +56,7 @@
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="{% static 'js/writing.js' %}"></script>
+<script src="{% static 'js/write_level0.js' %}"></script>
 <div class="top-bar">
     <button id="save-btn">Save</button>
     <button id="undo-btn">Undo</button>

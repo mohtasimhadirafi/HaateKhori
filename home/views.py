@@ -14,7 +14,7 @@ def home(request):
 
 
 def writing(request):
-    return render(request, 'writing.html')
+    return render(request, 'writing_level0.html')
 
 
 def infouser(request):
@@ -55,3 +55,12 @@ def shape_level1_learn(requset):
 
 def object_level0_learn(request):
     return render(request,'object_level0_learn.html')
+
+def english_number_level0(request):
+    return render(request, 'english_number_level0.html')
+
+def bangla_charecter_level0(request):
+    return render(request, 'bangla_charecter_level0.html')
+
+def bangla_number_level0(request):
+    return render(request, 'bangla_number_level0.html')
