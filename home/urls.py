@@ -18,4 +18,6 @@ urlpatterns = [path("", views.index, name="index"),
                path("english_number", views.english_number_level0, name="english_number"),
                path("bangla_charecter", views.bangla_charecter_level0, name="bangla_charecter"),
                path("bangla_number", views.bangla_number_level0, name="bangla_number"),
-               path("writing", views.writing, name="writing")]
+               path("writing_level1", views.writing_level1, name="writing_level1"),
+               path("writing_level2", views.writing_level2, name="writing_level2"),
+               path("writing", views.writing_level0, name="writing")]

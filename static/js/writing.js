@@ -26,7 +26,7 @@ function redraw() {
 
         ctx.stroke();
     }
-     //console.log(s.points);
+     console.log(s.points);
 }
 
 

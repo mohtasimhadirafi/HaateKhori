@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <title>Haate Khori</title>
-    <link rel="stylesheet" href="{% static 'css/writing.css' %}">
+    <link rel="stylesheet" href="{% static 'css/writing_level0.css' %}">
     <link rel="stylesheet" href="{% static 'css/menubar.css' %}">
 </head>
 
@@ -30,8 +30,8 @@
 
 <div class="sub-menu">
     <img src="/static/img/write_level0_menu.png" width="22%">
-    <img id="level1" src="/static/img/level1_normal.png" width="20.4%">
-    <img id="level2" src="/static/img/level2_normal.png" width="20.4%">
+    <a href="{% url 'writing_level1' %}"><img id="level1" src="/static/img/level1_normal.png" width="20.4%"></a>
+    <a href="{% url 'writing_level2' %}"><img id="level2" src="/static/img/level2_normal.png" width="20.4%"></a>
     <img id="charecter-choose-box" src="/static/img/charecter_choose_box.png" width="19%">
     <img id="draw-dot-line" src="/static/img/draw_dot_line.png">
     <img id="submit-btn" src="/static/img/submit_btn.png" width="130">
