@@ -35,25 +35,49 @@ body{
 
 #select-back{
     position: relative;
-    top: -353px;
-    left: 45px;
+    top: -347px;
+    left: 35px;
+}
+
+#add-image{
+    position: relative;
+    top: -350px;
+    left: -83px;
+    opacity: .7;
+}
+
+#add-image:hover{
+    opacity: 1;
+
 }
 
 #learn-select-active{
     position: relative;
-    top: -430px;
+    top: -425px;
     left: -230px;
+    opacity: .9;
 }
 
 #identify-select{
     position: relative;
-    top: -420px;
+    top: -440px;
     left: 74px;
-    opacity: .8;
+    opacity: .6;
 
 }
 
 #identify-select:hover{
     opacity: 1;
-    width: 150px;
+
+}
+
+#level1-choice{
+    position: relative;
+    top: -300px;
+    left: 33px;
+    opacity: .7;
+}
+
+#level1-choice:hover{
+    opacity: 1;
 }
