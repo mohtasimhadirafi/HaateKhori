@@ -13,8 +13,14 @@ def home(request):
     return render(request, 'home.html')
 
 
-def writing(request):
+def writing_level0(request):
     return render(request, 'writing_level0.html')
+
+def writing_level1(request):
+    return render(request, 'writing_level1.html')
+
+def writing_level2(request):
+    return render(request, 'writing_level2.html')
 
 
 def infouser(request):
