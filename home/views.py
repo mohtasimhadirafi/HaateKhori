@@ -46,3 +46,12 @@ def add_resource(request):
 
 def help(request):
     return render(request,'help.html')
+
+def surroundings_shape_level0_identify(request):
+    return render(request,'surroundings_shape_level0_identify.html')
+
+def shape_level1_learn(requset):
+    return render(requset,'shape_level1_learn.html')
+
+def object_level0_learn(request):
+    return render(request,'object_level0_learn.html')
