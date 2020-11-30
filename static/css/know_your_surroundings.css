@@ -19,29 +19,47 @@ body {
 #shape-back{
     position: relative;
     top: 70px;
-    left: -50px;
+    left: 0px;
 }
 
 #sub-menu{
     position: relative;
     top: -40px;
-    left: -20px;
+    left: 10px;
 }
 
-#shape-next-btn{
+#learn-shape-next-btn{
     position: relative;
     top: 280px;
+    opacity: .7;
+    left: 20px;
+}
+
+#learn-shape-next-btn:hover{
+    opacity: 1;
+}
+
+#learn-shape-back-btn{
+    position: relative;
+    left: -1060px;
+    top: 280px;
+    opacity: .7;
+
+}
+
+#learn-shape-back-btn:hover{
+    opacity: 1;
 }
 
 #shape-active-btn{
     position: relative;
     top: -470px;
-    left: 40px;
+    left: 70px;
 }
 #object-btn{
     position: relative;
     top: -512.5px;
-    left: 150px;
+    left: 180px;
     opacity: .8;
 }
 
@@ -60,19 +78,19 @@ body {
 #select-back{
     position: relative;
     top: -430px;
-    left: -1px;
+    left: 29px;
 }
 
 #learn-select-active{
     position: relative;
     top: -530px;
-    left: 20px;
+    left: 50px;
 }
 
 #identify-select{
     position: relative;
     top: -520px;
-    left: 20px;
+    left: 50px;
     opacity: .8;
 
 }
@@ -85,12 +103,12 @@ body {
 #shape-level1{
     position: relative;
     top: -480px;
-    left: -8px;
+    left: 22px;
     opacity: .8;
 }
 
 #shape-level1:hover{
     opacity: 1;
     width: 320px;
-    left: -16px;
+    left: 14px;
 }
