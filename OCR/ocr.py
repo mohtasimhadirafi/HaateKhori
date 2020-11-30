@@ -21,7 +21,7 @@ def parse_text(threshold_img):
 
 
 if __name__ == "__main__":
-    image = cv2.imread(IMG_DIR + 'A.png')
+    image = cv2.imread(IMG_DIR + '8.png')
 
     thresholds_image = pre_processing(image)
     parsed_data = parse_text(thresholds_image)
