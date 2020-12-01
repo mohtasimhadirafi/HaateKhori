@@ -82,3 +82,6 @@ def bangla_number_level0(request):
 
 def anime(request):
     return render(request, 'anime.html')
+
+def surrounding_shape_level0_learn(request):
+    return render(request, 'know_your_surroundings.html')

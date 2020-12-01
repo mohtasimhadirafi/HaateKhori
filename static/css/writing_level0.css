@@ -14,7 +14,7 @@ body {
     width: 1000px;
     height: 40px;
     float: right;
-    top: -946px;
+    top: -1029px;
     left: -100px;
     z-index: 2;
 }
@@ -150,4 +150,32 @@ body {
     position: relative;
     top: -180px;
     left: 565px;
+}
+
+#slidebar-option{
+    position: relative;
+    top: -700px;
+    left: 1510px;
+}
+
+.container-slider{
+    visibility: hidden;
+    position: relative;
+    top: -1080px;
+    left: 1190px;
+}
+
+#table{
+    border-color: yellow;
+    position: relative;
+    top: -500px;
+    left: 20px;
+    z-index: 30;
+}
+
+#single-charecter-progress-graph{
+    position: relative;
+    top: -500px;
+    left: 10px;
+    z-index: 30;
 }

@@ -47,7 +47,7 @@ function init() {
     canvas[0].height = 530;
 
     function mouseEvent(e) {
-        brush.x = e.pageX-430;
+        brush.x = e.pageX-415;
         brush.y = e.pageY-190;
 
         console.log("Mousedown event");
