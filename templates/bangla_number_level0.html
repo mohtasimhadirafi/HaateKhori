@@ -1,6 +1,70 @@
+<!DOCTYPE html>
+{% load static %}
 <html>
-<head></head>
+
+<head>
+    <meta charset="utf-8">
+    <title>Haate Khori</title>
+    <link rel="stylesheet" href="{% static 'css/writing_level0.css' %}">
+    <link rel="stylesheet" href="{% static 'css/menubar.css' %}">
+</head>
 <body>
-<h1>Welcome from bangla number</h1>
+<div class="menubar">
+    <a href="{% url 'contact_us' %}">Contact Us</a>
+    <a href="{% url 'about' %}">About</a>
+    <a href="{% url 'my_profile' %}">My Profile</a>
+    <a href="{% url 'know_you' %}">Know You</a>
+    <a href="{% url 'surroundings' %}">Know Your Surroundings</a>
+    <a class="active" href="#">Learn To Write</a>
+    <a href="{% url 'home' %}">Home</a>
+</div>
+<div class="canvas">
+    <canvas id="draw"></canvas>
+    <style>
+        canvas {
+            background-image: url("/static/img/write_learn_level0_bangla_number_ek.png")
+        }
+    </style>
+</div>
+
+<div class="sub-menu">
+    <img src="/static/img/write_level0_menu.png" width="22%">
+    <a href="{% url 'writing_level1' %}"><img id="level1" src="/static/img/level1_normal.png" width="20.4%"></a>
+    <a href="{% url 'writing_level2' %}"><img id="level2" src="/static/img/level2_normal.png" width="20.4%"></a>
+    <img id="charecter-choose-box" src="/static/img/charecter_choose_box.png" width="19%">
+    <img id="draw-dot-line" src="/static/img/draw_dot_line.png">
+    <img id="submit-btn" src="/static/img/submit_btn.png" width="130">
+    <label class="container">English Charecter
+        <input type="radio"  name="radio">
+        <span class="checkmark"></span>
+    </label>
+    <label class="container">English Number
+        <input type="button" name="radio" onclick="goToEnglishNumber()">
+        <span class="checkmark"></span>
+    </label>
+    <label class="container">বাংলা অক্ষর
+        <input type="radio" name="radio" onclick="goToBanglaCharecter()">
+        <span class="checkmark"></span>
+    </label>
+    <label class="container">বাংলা সংখ্যা
+        <input type="radio" name="radio" checked="checked" onclick="goToBanglaNumber()">
+        <span class="checkmark"></span>
+    </label>
+</div>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="{% static 'js/writing.js' %}"></script>
+<script src="{% static 'js/write_level0.js' %}"></script>
+
+<div class="top-bar">
+    <button id="save-btn">Save</button>
+    <button id="undo-btn">Undo</button>
+    <button id="clear-btn">Clear</button>
+    <!--
+    <input type="color" id="color-picker" value="#ff0000">
+    -->
+
+</div>
 </body>
 </html>
