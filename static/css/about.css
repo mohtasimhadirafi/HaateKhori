@@ -1,7 +1,78 @@
 body{
-    background: url('/static/img/about.jpg') no-repeat center center fixed;
+    background: url('/static/img/start_back.png') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+.menubar {
+    background-color: transparent;
+    overflow: hidden;
+}
+  
+.banner {
+    width: 95%;
+    margin-left: 10px;
+
+}
+
+.banner h1{
+    color: white;
+    opacity: .9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 70px;
+    margin-bottom: 0px;
+    position: relative;
+    top: 100px;
+    left: 50px;
+    opacity: .9;
+}
+
+.banner p{
+    -webkit-text-fill-color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    position: relative;
+    top: 100px;
+    left: 54px;
+    opacity: .9;
+}
+
+.banner a{
+    /*margin-top: 0px;*/
+    /*font-size: 30px;*/
+    /*position: absolute;*/
+    /*text-decoration: none;*/
+    /*color: white;*/
+    /*cursor: pointer;*/
+    /*border: 2px solid transparent;*/
+    /*border-radius: 40px;*/
+    /*background-image: radial-gradient(circle at top left, orange, orange);*/
+    /*background-origin: border-box;*/
+    /*background-clip: content-box, border-box;*/
+}
+
+.banner span{
+    display: block;
+    padding: 8px;
+}
+
+.banner ul{
+    font-size: 15px;
+    color: white;
+}
+
+#startlearning{
+    background-color: orange;
+    font-size: 15px;
+    position: relative;
+    padding: 10px 80px 10px 80px;
+    color: black;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    top: 120px;
+    left: 54px;
 }
