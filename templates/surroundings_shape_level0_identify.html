@@ -26,13 +26,40 @@
         <a href="{% url 'object_level0_learn' %}"><img id="object-btn" src="/static/img/object_btn.png" width="80"></a>
         <img id="select-back" src="/static/img/know_your_surroundings_level0_black.png" width="300">
         <img id="learn-select-active" src="/static/img/learn_option.png" width="140">
-        <a href="{% url 'surroundings_shape_level0_identify' %}"><img id="identify-select" src="/static/img/identify_select_active.png" width="140"></a>
-        <a href="{% url 'shape_level1_learn' %}"><img id="shape-level1" src="/static/img/shape_level1_option_submenu.png" width="300"></a>
+        <a href="{% url 'surroundings_shape_level0_identify' %}"><img id="identify-select"
+                                                                      src="/static/img/identify_select_active.png"
+                                                                      width="140"></a>
+        <a href="{% url 'shape_level1_learn' %}"><img id="shape-level1"
+                                                      src="/static/img/shape_level1_option_submenu.png" width="300"></a>
 
     </div>
-    <img id="shape-back" src="/static/img/shape_line_img_background.png" width="900" height="500">
+    <img id="shape-back" src="/static/img/shape_identify1_circle.png" width="900" height="500">
     <img id="learn-shape-next-btn" src="/static/img/shape_learn_next_btn.png" width="70" height="70">
     <img id="learn-shape-back-btn" src="/static/img/shape_learn_back_btn.png" width="70" height="70">
+
+
+</div>
+<div class="card">
+    <img src="/static/img/identify_1_circle_option_back.png" alt="Avatar" style="width:15%">
+    <label class="container">Circle
+        <input type="radio"  name="radio">
+        <span class="checkmark"></span>
+    </label>
+    <label class="container">Quadrangle
+        <input type="radio" name="radio" onclick="goToEnglishNumber()">
+        <span class="checkmark"></span>
+    </label>
+    <label class="container">Triangle
+        <input type="radio" name="radio" onclick="goToBanglaCharecter()">
+        <span class="checkmark"></span>
+    </label>
+    <label class="container">Line
+        <input type="radio" name="radio" onclick="goToBanglaNumber()">
+        <span class="checkmark"></span>
+    </label>
+    <label class="container">
+        <button id="submit-option">Submit</button>
+    </label>
 </div>
 
 <script src="/static/js/change_image_surroundings.js"></script>
