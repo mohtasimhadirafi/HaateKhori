@@ -1,131 +1,85 @@
 body {
-    background-color: black;
+    margin: 0;
+    background: black;
     overflow: hidden;
+
 }
 
-.card {
-    position: relative;
-    top: -900px;
-    left: 1000px;
-}
-
-.main {
+.top-bar {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-content: center;
+    background: url("/static/img/writing_top_bar_back.png");
+    border-bottom: 2px solid black;
+    position: relative;
+    width: 1000px;
+    height: 40px;
+    float: right;
+    top: -946px;
+    left: -100px;
+    z-index: 2;
 }
 
-#label {
-    position: relative;
-    left: 700px;
-    top: 20px;
+.top-bar * {
+    margin: 5px 10px;
+
+
 }
 
-#shape-back{
+#draw {
+    display: block;
+    float: right;
+    width: 1000px;
+    height: 530px;
     position: relative;
-    top: 70px;
-    left: 0px;
+    left: -50px;
+
+
 }
 
-#sub-menu{
+.canvas {
+    float: right;
     position: relative;
-    top: -40px;
-    left: 10px;
-}
-
-#learn-shape-next-btn{
-    position: relative;
-    top: 280px;
+    top: 140px;
+    width: 1000px;
+    height: 530px;
+    left: -50px;
+    z-index: 2;
     opacity: .7;
-    left: 20px;
+
 }
 
-#learn-shape-next-btn:hover{
-    opacity: 1;
-}
-
-#learn-shape-back-btn{
+.sub-menu {
     position: relative;
-    left: -1060px;
-    top: 280px;
-    opacity: .7;
-
+    margin-left: 40px;
+    z-index: 0;
+    -moz-user-select: none;
 }
 
-#learn-shape-back-btn:hover{
-    opacity: 1;
-}
-
-#shape-active-btn{
+#level1 {
     position: relative;
-    top: -470px;
-    left: 70px;
+    top: -230px;
+    left: 13px;
+
 }
-#object-btn{
+
+#level2 {
     position: relative;
-    top: -512.5px;
-    left: 180px;
-    opacity: .8;
+    left: -296.5px;
+    top: -170px;
 }
 
-#object-btn:hover{
-    opacity: 1;
-
-}
-
-.shape-level0{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-}
-
-#select-back{
+#charecter-choose-box {
     position: relative;
-    top: -430px;
-    left: 29px;
-}
-
-#learn-select-active{
-    position: relative;
-    top: -530px;
-    left: 50px;
-    opacity: .6;
-}
-
-#identify-select{
-    position: relative;
-    top: -520px;
-    left: 50px;
-    opacity: .8;
-
-}
-
-#learn-select-active:hover{
-    opacity: 1;
-    width: 150px;
-}
-
-#shape-level1{
-    position: relative;
-    top: -480px;
-    left: 22px;
-    opacity: .8;
-}
-
-#shape-level1:hover{
-    opacity: 1;
-    width: 320px;
-    left: 14px;
+    top: -320px;
+    left: -580px;
 }
 
 /* The container */
 .container {
     display: block;
     position: relative;
-    top: -182px;
-    left: 30px;
+    top: -532px;
+    left: 50px;
     padding-left: 35px;
     margin-bottom: 10px;
     cursor: pointer;
@@ -186,9 +140,15 @@ body {
     border-radius: 50%;
     background: orange;
 }
-#submit-option{
+
+#draw-dot-line {
     position: relative;
-    top: 20px;
-    left: 80px;
-    color: darkgreen;
+    top: -825px;
+    left: 550px;
+}
+
+#submit-btn {
+    position: relative;
+    top: -180px;
+    left: 565px;
 }

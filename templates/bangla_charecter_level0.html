@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <title>Haate Khori</title>
-    <link rel="stylesheet" href="{% static 'css/writing_level0.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bangla_charecter.css' %}">
     <link rel="stylesheet" href="{% static 'css/menubar.css' %}">
 </head>
 <body>
@@ -35,7 +35,7 @@
     <img id="draw-dot-line" src="/static/img/draw_dot_line.png">
     <img id="submit-btn" src="/static/img/submit_btn.png" width="130">
     <label class="container">English Charecter
-        <input type="radio"  name="radio">
+        <input type="radio"  name="radio" onclick="goToEnglishCharecter()">
         <span class="checkmark"></span>
     </label>
     <label class="container">English Number

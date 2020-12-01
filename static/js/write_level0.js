@@ -10,6 +10,10 @@ function goToBanglaNumber() {
     window.location.href = "/bangla_number";
 }
 
+function goToEnglishCharecter() {
+    window.location.href = "/writing"
+}
+
 var container = document.getElementById('contain-slider');
 let btnSlider = document.querySelector('#slidebar-option');
 

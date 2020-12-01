@@ -1,9 +1,4 @@
-/**
-  * You may use this code for free on any web page provided that
-  * these comment lines and the following credit remain in the code.
-  * Cross Browser Fireworks from http://www.javascript-fx.com
-  */
-/*************************************************/
+
 if(!window.JSFX) JSFX=new Object();
 
 if(!JSFX.createLayer)
