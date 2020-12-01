@@ -79,3 +79,6 @@ def bangla_charecter_level0(request):
 
 def bangla_number_level0(request):
     return render(request, 'bangla_number_level0.html')
+
+def anime(request):
+    return render(request, 'anime.html')
