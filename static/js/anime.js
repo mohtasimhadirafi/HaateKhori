@@ -176,7 +176,7 @@ JSFX.FireworkDisplay.prototype.explode = function()
 
 	var x = (50 + (Math.random() * (gX()-150)));
 	var y = (50 + (Math.random() * (gY()-150)));
-	var fw = Math.floor(Math.random() * 5);
+	var fw = Math.floor(Math.random() * 35);
 
 	for(i=0 ; i<this.sparks.length ; i++)
 		this.sparks[i].fire(x, y, fw, cl);
@@ -196,7 +196,7 @@ JSFX.FireworkDisplay.prototype.animate = function()
 JSFX.FireworkDisplay.prototype.start = function()
 {
 	if(this.timerId == -1)
-		this.timerId = setInterval("window."+this.id+".animate()", 40);
+		this.timerId = setInterval("window."+this.id+".animate()", 20);
 
 }
 JSFX.FireworkDisplay.prototype.stop = function()
@@ -205,7 +205,7 @@ JSFX.FireworkDisplay.prototype.stop = function()
 	{
 		clearInterval(this.timerId);
 		for(i=0 ; i<this.sparks.length ; i++)
-			this.sparks[i].moveTo(-10,-10);
+			this.sparks[i].moveTo(-30,-30);
 		this.timerId = -1;
 		this.step = 0;
 	}
@@ -218,7 +218,7 @@ JSFX.FWStart = function()
 	myFW1.start();
 	setTimeout("myFW2.start()", 1000);
 }
-myFW1 = new JSFX.FireworkDisplay(40);
-myFW2 = new JSFX.FireworkDisplay(40);
+myFW1 = new JSFX.FireworkDisplay(140);
+myFW2 = new JSFX.FireworkDisplay(140);
 JSFX.FWLoad=window.onload;
 window.onload=JSFX.FWStart;
