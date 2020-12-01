@@ -5,6 +5,15 @@ body {
   margin: 0;
 }
 
+#heading{
+  text-align: center;
+  justify-content: center;
+  font-size: xx-large;
+  font-style: oblique;
+  opacity: .8;
+
+}
+
 html {
   box-sizing: border-box;
 }
@@ -21,12 +30,25 @@ html {
 }
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(129, 129, 129, 0.2);
+  box-shadow: 0 4px 8px 0 rgba(245, 245, 255, 0.56);
   margin: 8px;
+  border-radius: 5px;
+  width: 80%;
+  border: 5px solid rgba(255, 165, 0, 0.76);
+  margin-left: 70px ;
+  opacity: .8;
+  justify-content: center;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.card:hover{
+  opacity: 1;
 }
 
 .container {
   padding: 0 16px;
+  margin: 30px;
 }
 
 .container::after, .row::after {
@@ -60,4 +82,6 @@ html {
     width: 100%;
     display: block;
   }
+
+
 }

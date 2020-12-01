@@ -8,57 +8,62 @@
     <link rel="stylesheet" href="{% static 'css/menubar.css' %}">
 </head>
 <body>
-    <div class="menubar">
+<div class="menubar">
     <a class="active" href="#">Contact Us</a>
     <a href="{% url 'about' %}">About</a>
     <a href="{% url 'my_profile' %}">My Profile</a>
     <a href="{% url 'know_you' %}">Know You</a>
-    <a href="{% url 'surroundings' %}
-">Know Your Surroundings</a>
+    <a href="{% url 'surroundings' %}">Know Your Surroundings</a>
     <a href="{% url 'writing' %}">Learn To Write</a>
     <a href="{% url 'home' %}">Home</a>
 </div>
 
-<h2 style="text-align:center">Our Team</h2>
+<h2 id="heading"><u>Team Members<u/></h2>
 <div class="row">
-  <div class="column">
-    <div class="card">
-      <img src="/static/img/ratul.jpg" alt="Ratul" style="width:70%">
-      <div class="container">
-        <h2>Ratul Mahjabin</h2>
-        <p class="title">Team Member</p>
-        <p>ID: 180042123</p>
-        <p>ratulmahjabin@iut-dhaka.edu</p>
-        <p><button class="button">Contact</button></p>
-      </div>
+    <div class="column">
+        <div class="card">
+            <img id="ratul" src="/static/img/ratul.jpg" alt="Ratul" width="70%">
+            <div class="container">
+                <h2>Ratul Mahjabin</h2>
+                <p class="title">Team Member</p>
+                <p>ID: 180042123</p>
+                <p>ratulmahjabin@iut-dhaka.edu</p>
+                <p>
+                    <button class="button">Contact</button>
+                </p>
+            </div>
+        </div>
     </div>
-  </div>
-
-  <div class="column">
-    <div class="card">
-      <img src="/static/img/sabbir.jpg" alt="Sabbir" style="width:70%">
-      <div class="container">
-        <h2>MD Sabbir Rahman</h2>
-        <p class="title">Team Member</p>
-        <p>ID: 180042142</p>
-        <p>sabbirrahman42@iut-dhaka.edu</p>
-        <p><button class="button">Contact</button></p>
-      </div>
-    </div>
-  </div>
 
     <div class="column">
-    <div class="card">
-      <img src="/static/img/rafi.jpg" alt="Rafi" style="width:70%">
-      <div class="container">
-        <h2>Mohtasim Hadi Rafi</h2>
-        <p class="title">Team Member</p>
-        <p>ID: 180042145</p>
-        <p>sabbirrahman42@iut-dhaka.edu</p>
-        <p><button class="button">Contact</button></p>
-      </div>
+        <div class="card">
+            <img id="sabbir" src="/static/img/sabbir.jpg" alt="Sabbir" style="width:70%">
+            <div class="container">
+                <h2>MD Sabbir Rahman</h2>
+                <p class="title">Team Member</p>
+                <p>ID: 180042142</p>
+                <p>sabbirrahman42@iut-dhaka.edu</p>
+                <p>
+                    <button class="button">Contact</button>
+                </p>
+            </div>
+        </div>
     </div>
-  </div>
+
+    <div class="column">
+        <div class="card">
+            <img id="rafi" src="/static/img/rafi.jpg" alt="Rafi" style="width:70%">
+            <div class="container">
+                <h2>Mohtasim Hadi Rafi</h2>
+                <p class="title">Team Member</p>
+                <p>ID: 180042145</p>
+                <p>mohtasimhadi@iut-dhaka.edu</p>
+                <p>
+                    <button class="button">Contact</button>
+                </p>
+            </div>
+        </div>
+    </div>
 </div>
 </body>
 </html>

@@ -1,9 +1,5 @@
 body{
-    background: url('/static/img/start_back.png') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    background: black;
 }
 
 .menubar {
@@ -14,7 +10,19 @@ body{
 .banner {
     width: 95%;
     margin-left: 10px;
+    margin-right: 10px;
 
+}
+
+#img{
+    position: relative;
+    top:50px ;
+    left: 20px;
+
+}
+#head{
+    position: relative;
+    top: -20px;
 }
 
 .banner h1{

@@ -1,8 +1,40 @@
-<html>
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
 <head>
-
+    <meta charset="utf-8">
+    <title>Haate Khori</title>
+    <link rel="stylesheet" href="{% static 'css/surroundings_shape_level0_identify.css' %}">
+    <link rel="stylesheet" href="{% static 'css/menubar.css' %}">
 </head>
 <body>
-<h1>Hello from surroundings_shape_level0_identify</h1>
+<div class="menubar">
+    <a href="{% url 'contact_us' %}">Contact Us</a>
+    <a href="{% url 'about' %}">About</a>
+    <a href="{% url 'my_profile' %}">My Profile</a>
+    <a href="{% url 'know_you' %}">Know You</a>
+    <a class="active" href="#">Know Your Surroundings</a>
+    <a href="{% url 'writing' %}">Learn To Write</a>
+    <a href="{% url 'home' %}">Home</a>
+</div>
+
+<img id="label" src="/static/img/shape_level0_label.png" width="30%">
+<div class="main">
+    <div class="shape-level0">
+        <img id="sub-menu" src="/static/img/know_your_surroundings_shape_level0.png" width="70%">
+        <img id="shape-active-btn" src="/static/img/shape_active_btn.png" width="100">
+        <a href="{% url 'object_level0_learn' %}"><img id="object-btn" src="/static/img/object_btn.png" width="80"></a>
+        <img id="select-back" src="/static/img/know_your_surroundings_level0_black.png" width="300">
+        <img id="learn-select-active" src="/static/img/learn_option.png" width="140">
+        <a href="{% url 'surroundings_shape_level0_identify' %}"><img id="identify-select" src="/static/img/identify_select_active.png" width="140"></a>
+        <a href="{% url 'shape_level1_learn' %}"><img id="shape-level1" src="/static/img/shape_level1_option_submenu.png" width="300"></a>
+
+    </div>
+    <img id="shape-back" src="/static/img/shape_line_img_background.png" width="900" height="500">
+    <img id="learn-shape-next-btn" src="/static/img/shape_learn_next_btn.png" width="70" height="70">
+    <img id="learn-shape-back-btn" src="/static/img/shape_learn_back_btn.png" width="70" height="70">
+</div>
+
+<script src="/static/js/change_image_surroundings.js"></script>
 </body>
 </html>
