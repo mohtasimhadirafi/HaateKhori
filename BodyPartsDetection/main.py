@@ -23,6 +23,8 @@ def mouthDetection(image):
     for (x, y, w, h) in mouth_rects:
         cv2.rectangle(image, (x, y), (x + w, y + h), (0, 255, 0), 3)
     cv2.imwrite('Images/Output/Mouth.JPEG', image)
+    cv2.imshow("Mouth", image)
+    cv2.waitKey(0)
 
 
 def noseDetection(image):
@@ -32,6 +34,8 @@ def noseDetection(image):
     for (x, y, w, h) in nose_rects:
         cv2.rectangle(image, (x, y), (x + w, y + h), (0, 255, 0), 3)
     cv2.imwrite('Images/Output/Nose.JPEG', image)
+    cv2.imshow("Nose", image)
+    cv2.waitKey(0)
 
 
 def eyeDetection(image):
@@ -41,6 +45,8 @@ def eyeDetection(image):
     for (x, y, w, h) in eye_rects:
         cv2.rectangle(image, (x, y), (x + w, y + h), (0, 255, 0), 3)
     cv2.imwrite('Images/Output/Eye.JPEG', image)
+    cv2.imshow("Eye", image)
+    cv2.waitKey(0)
 
 
 def frontalFaceDetection(image):
@@ -50,6 +56,8 @@ def frontalFaceDetection(image):
     for (x, y, w, h) in face_rects:
         cv2.rectangle(image, (x, y), (x + w, y + h), (0, 255, 0), 3)
     cv2.imwrite('Images/Output/Face.JPEG', image)
+    cv2.imshow("Face", image)
+    cv2.waitKey(0)
 
 
 def runDetectionMethods(image):
@@ -67,3 +75,4 @@ def runDetectionMethods(image):
 
 if __name__ == '__main__':
     runDetectionMethods("3.jpg")
+    cv2.destroyAllWindows()
