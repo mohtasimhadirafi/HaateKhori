@@ -1,7 +1,5 @@
 import cv2
 
-ds_factor = 0.5
-
 
 def getCascade(action):
     switcher = {
@@ -26,6 +24,6 @@ def bodyPartDetection(image, action):
 
 
 if __name__ == '__main__':
-    bodyPartDetection(cv2.resize(cv2.imread('Images/Input/' + "1.jpg"), None, fx=ds_factor, fy=ds_factor,
+    bodyPartDetection(cv2.resize(cv2.imread('Images/Input/' + "1.jpg"), None, fx=0.5, fy=0.5,
                                  interpolation=cv2.INTER_AREA), "nose")
     cv2.destroyAllWindows()
