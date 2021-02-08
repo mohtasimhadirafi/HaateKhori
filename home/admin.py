@@ -1,6 +1,7 @@
 from django.contrib import admin
-from .models import UploadObjectDetection
+from .models import ObjectDetection
 # Register your models here.
-
-admin.site.register(UploadObjectDetection)
+@admin.register(ObjectDetection)
+class objectDetectionAdmin(admin.ModelAdmin):
+    list_display = ('id','filename','objectName')
 

@@ -1,5 +1,7 @@
 from django.shortcuts import render
+import cv2
 
+from .objectDetect import work
 
 def index(request):
     return render(request, 'index.html')
@@ -85,3 +87,6 @@ def anime(request):
 
 def surrounding_shape_level0_learn(request):
     return render(request, 'know_your_surroundings.html')
+
+def identifyObjectLevel0(request):
+    return render(request,'identifyObjectLevel0.html')

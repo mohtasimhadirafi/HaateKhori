@@ -23,5 +23,6 @@ urlpatterns = [path("", views.index, name="index"),
                path("writing_level2", views.writing_level2, name="writing_level2"),
                path("add_image_know_you", views.add_image_know_you, name="add_image_know_you"),
                path("know_you_level1", views.know_you_level1, name="know_you_level1"),
+               path("identify_object_level0", views.identifyObjectLevel0, name="identify_object_level0"),
                path("anime", views.anime, name="anime"),
                path("writing", views.writing_level0, name="writing")]

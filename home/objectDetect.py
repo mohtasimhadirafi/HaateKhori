@@ -1,11 +1,15 @@
 import cv2
 import numpy as np
+import uuid
 from _collections import defaultdict
+import random
+import time
 
 # Load Yolo
 labels = []
 myDict = defaultdict(list)
 functionDict = defaultdict(list)
+object = 0
 
 def work(myImage):
 
@@ -49,7 +53,7 @@ def work(myImage):
             scores = detection[5:]
             class_id = np.argmax(scores)
             confidence = scores[class_id]
-            if confidence > 0.5:          #object detetcted
+            if confidence > 0.7:          #object detetcted
                 center_x = int(detection[0] * width)
                 center_y = int(detection[1] * height)
                 w = int(detection[2] * width)
@@ -81,21 +85,17 @@ def work(myImage):
     for i in range(len(boxes)):
         if i in indexes:
             x, y, w, h = boxes[i]
-            print(i)
+            #print(i)
             label = str(classes[class_ids[i]])
             color = colors[i]
             #print(label),print(boxes[i])
             image2 = cv2.resize(myImage,None, fx=.3, fy=.3)
             cv2.rectangle(image2, (x, y), (x + w, y + h), color, 1)
             cv2.putText(image2, label, (x, y + 20), font, 1, color, 2)
-            cv2.imwrite("objectImage/" + label +str(i)+ ".jpg", image2)
-            list = []
-            list.append(x)
-            list.append(y)
-            list.append(w)
-            list.append(h)
+            cv2.imwrite("static/objectImage/" + label + str(i)+ str(int(time.time())) + ".jpg", image2)
+            myDict[ label +str(i)+ str(int(time.time())) + ".jpg"].append(label)
 
-            myDict[label].append(list)
+
 
 
 
@@ -104,6 +104,7 @@ def work(myImage):
             #cv2.imwrite("media/" + label + ".jpg", img)
 
 
-    #return img
+
+    return myDict
 
 
