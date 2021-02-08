@@ -12,7 +12,7 @@ btnCngLearnNext.addEventListener('click' , ()=>{
         btnCngLearnBack.style.visibility = 'visible';
     }
     else if(shapeImageLearnCount == 1){
-        img.src = '/static/img/object_learn_laptop_illustartion.png';
+        img.src = '/static/img/object_learn_chair.png';
         shapeImageLearnCount++;
 
     }

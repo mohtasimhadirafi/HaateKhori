@@ -7,7 +7,10 @@ labels = []
 myDict = defaultdict(list)
 functionDict = defaultdict(list)
 
-def work(img):
+def work(myImage):
+
+
+    img = myImage
     net = cv2.dnn.readNet("yolov3.weights", "yolov3.cfg")
     classes = []
     with open("coco.names","r") as f:
@@ -78,8 +81,14 @@ def work(img):
     for i in range(len(boxes)):
         if i in indexes:
             x, y, w, h = boxes[i]
+            print(i)
             label = str(classes[class_ids[i]])
-            #print(label)
+            color = colors[i]
+            #print(label),print(boxes[i])
+            image2 = cv2.resize(myImage,None, fx=.3, fy=.3)
+            cv2.rectangle(image2, (x, y), (x + w, y + h), color, 1)
+            cv2.putText(image2, label, (x, y + 20), font, 1, color, 2)
+            cv2.imwrite("objectImage/" + label +str(i)+ ".jpg", image2)
             list = []
             list.append(x)
             list.append(y)
@@ -89,14 +98,12 @@ def work(img):
             myDict[label].append(list)
 
 
-            color = colors[i]
+
             cv2.rectangle(img, (x, y), (x + w, y +h), color, 1)
             cv2.putText(img, label, (x, y+20), font, 1, color, 2)
+            #cv2.imwrite("media/" + label + ".jpg", img)
 
 
-    return img,myDict
-
-
-
+    #return img
 
 
