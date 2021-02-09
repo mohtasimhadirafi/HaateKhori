@@ -5,7 +5,8 @@
 <head>
     <meta charset="utf-8">
     <title>Haate Khori</title>
-    <link rel="stylesheet" href="{% static 'css/object_level0_learn.css' %}">p
+    <link rel="stylesheet" href="{% static 'css/object_level0_learn.css' %}">
+    p
     <link rel="stylesheet" href="{% static 'css/menubar.css' %}">
 </head>
 <body>
@@ -26,8 +27,10 @@
         <img id="object-btn-active" src="/static/img/object_choose_btn_active.png" width="80">
         <img id="select-back" src="/static/img/know_your_surroundings_level0_black.png" width="300">
         <img id="learn-select-active" src="/static/img/learn_option_active.png" width="140">
-        <a href="{% url 'identify_object_level0' %}"><img id="identify-select" src="/static/img/identify_option.png" width="140"></a>
-        <a href="{% url 'shape_level1_learn' %}"><img id="shape-level1" src="/static/img/shape_level1_option_submenu.png" width="300"></a>
+        <a href="{% url 'identify_object_level0' %}"><img id="identify-select" src="/static/img/identify_option.png"
+                                                          width="140"></a>
+        <a href="{% url 'shape_level1_learn' %}"><img id="shape-level1"
+                                                      src="/static/img/shape_level1_option_submenu.png" width="300"></a>
 
     </div>
     <img id="shape-back" src="/static/img/object_learn_chair.png" width="900" height="500">
@@ -35,7 +38,75 @@
     <img id="learn-shape-back-btn" src="/static/img/shape_learn_back_btn.png" width="70" height="70">
 </div>
 
-<script src="/static/js/change_image_object_learn.js"></script>
+<!--<script src="/static/js/change_image_object_learn.js"></script>-->
+<script>
+
+    console.log(typeof ("{{data|escapejs}}"))
+    var data = JSON.parse(JSON.parse('{{ data|escapejs }}'));
+
+    // console.log(data[0].fields.filename);
+    var srcImage ='/static/objectImage/'+ data[0].fields.filename;
+    console.log(srcImage);
+
+    var srcImage1 ='/static/objectImage/'+ data[1].fields.filename;
+    console.log(srcImage1);
+
+    var srcImage2 ='/static/objectImage/'+ data[2].fields.filename;
+    console.log(srcImage2);
+
+    // for (var x in data[1]){
+    //     data+=data[x]
+    //     console.log(data);
+    //
+    //
+    // }
+    let img = document.querySelector('#shape-back');
+    let btnCngLearnNext = document.querySelector('#learn-shape-next-btn');
+    let btnCngLearnBack = document.querySelector('#learn-shape-back-btn');
+    var shapeImageLearnCount = 0;
+
+    btnCngLearnBack.style.visibility = 'hidden';
+
+    btnCngLearnNext.addEventListener('click', () => {
+        if (shapeImageLearnCount == 0) {
+            img.src = srcImage;
+            shapeImageLearnCount++;
+            btnCngLearnBack.style.visibility = 'visible';
+        } else if (shapeImageLearnCount == 1) {
+            img.src = srcImage1;
+            shapeImageLearnCount++;
+
+        } else if (shapeImageLearnCount == 2) {
+            img.src = srcImage2;
+            shapeImageLearnCount++;
+        } else if (shapeImageLearnCount == 3) {
+            img.src = srcImage;
+
+            btnCngLearnNext.style.visibility = 'hidden';
+        }
+
+    })
+
+    btnCngLearnBack.addEventListener('click', () => {
+        if (shapeImageLearnCount == 3) {
+            img.src = '/static/img/shape_quadrangle_learn.png';
+            shapeImageLearnCount--;
+
+        } else if (shapeImageLearnCount == 2) {
+            img.src = '/static/img/shape_circle_learn.png';
+            shapeImageLearnCount--;
+
+        } else if (shapeImageLearnCount == 1) {
+            img.src = '/static/img/shape_triangle_learn.png';
+            shapeImageLearnCount--;
+        } else if (shapeImageLearnCount == 0) {
+            img.src = '/static/img/shape_line_img_background.png';
+            btnCngLearnBack.style.visibility = 'hidden';
+            btnCngLearnNext.style.visibility = 'visible';
+        }
+    })
+
+</script>
 
 </body>
 

@@ -1,7 +1,9 @@
+from django.core import serializers
 from django.shortcuts import render
 import cv2
-
-from .objectDetect import work
+from .models import ObjectDetection
+import json
+from django.core import serializers
 
 def index(request):
     return render(request, 'index.html')
@@ -71,7 +73,11 @@ def shape_level1_learn(requset):
     return render(requset,'shape_level1_learn.html')
 
 def object_level0_learn(request):
-    return render(request,'object_level0_learn.html')
+    # table_data = ObjectDetection.objects.all()
+    table_data = serializers.serialize("json", ObjectDetection.objects.all())
+    print(type(table_data))
+    context = {'data': json.dumps(table_data)}
+    return render(request,'object_level0_learn.html',context)
 
 def english_number_level0(request):
     return render(request, 'english_number_level0.html')
