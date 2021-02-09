@@ -5,8 +5,12 @@
 <head>
     <meta charset="utf-8">
     <title>Haate Khori</title>
-    <link rel="stylesheet" href="{% static 'css/object_level0_learn.css' %}">p
+    <link rel="stylesheet" href="{% static 'css/quiz.css' %}">
+    <link rel="stylesheet" href="{% static 'css/object_level0_learn.css' %}">
+    p
     <link rel="stylesheet" href="{% static 'css/menubar.css' %}">
+
+
 </head>
 <body>
 <div class="menubar">
@@ -25,17 +29,118 @@
         <img id="shape-btn" src="/static/img/shape_choose_btn.png" width="100">
         <img id="object-btn-active" src="/static/img/object_choose_btn_active.png" width="80">
         <img id="select-back" src="/static/img/know_your_surroundings_level0_black.png" width="300">
-        <img id="learn-select-active" src="/static/img/learn_option_active.png" width="140">
-        <a href="{% url 'identify_object_level0' %}"><img id="identify-select" src="/static/img/identify_option.png" width="140"></a>
-        <a href="{% url 'shape_level1_learn' %}"><img id="shape-level1" src="/static/img/shape_level1_option_submenu.png" width="300"></a>
+        <img id="learn-select" src="/static/img/learn_option.png" width="140">
+        <a href="{% url 'identify_object_level0' %}"><img id="identify-select-active"
+                                                          src="/static/img/identify_select_active.png" width="140"></a>
+        <a href="{% url 'shape_level1_learn' %}"><img id="shape-level1"
+                                                      src="/static/img/shape_level1_option_submenu.png" width="300"></a>
 
     </div>
     <img id="shape-back" src="/static/img/object_learn_chair.png" width="900" height="500">
     <img id="learn-shape-next-btn" src="/static/img/shape_learn_next_btn.png" width="70" height="70">
     <img id="learn-shape-back-btn" src="/static/img/shape_learn_back_btn.png" width="70" height="70">
 </div>
+<form id="form-identify">
+    <input id="test-input" type="text" placeholder="name">
+    <button type="button" id="btn-test">Submit</button>
+</form>
+<script>
 
-<script src="/static/js/change_image_object_identify.js"></script>
+
+    let btnTest = document.querySelector('#btn-test');
+
+
+
+    // console.log(text);
+    console.log(typeof ("{{data|escapejs}}"))
+    var data = JSON.parse(JSON.parse('{{ data|escapejs }}'));
+
+    // console.log(data[0].fields.filename);
+    var srcImage ='/static/objectImage/'+ data[0].fields.filename;
+    var srcObject = data[0].fields.objectName;
+    console.log(srcObject);
+
+    var srcImage1 ='/static/objectImage/'+ data[1].fields.filename;
+    var srcObject1 = data[1].fields.objectName;
+    console.log(srcObject1);
+
+    var srcImage2 ='/static/objectImage/'+ data[2].fields.filename;
+    var srcObject2 = data[2].fields.objectName;
+    console.log(srcObject2);
+
+    var srcImage3 ='/static/objectImage/'+ data[3].fields.filename;
+    var srcObject3 = data[3].fields.objectName;
+    console.log(srcObject3);
+
+    // for (var x in data[1]){
+    //     data+=data[x]
+    //     console.log(data);
+    //
+    //
+    // }
+    let img = document.querySelector('#shape-back');
+    let btnCngLearnNext = document.querySelector('#learn-shape-next-btn');
+    let btnCngLearnBack = document.querySelector('#learn-shape-back-btn');
+    var shapeImageLearnCount = 0;
+    var objectName;
+    btnCngLearnBack.style.visibility = 'hidden';
+
+    btnCngLearnNext.addEventListener('click', () => {
+        if (shapeImageLearnCount == 0) {
+            img.src = srcImage;
+            shapeImageLearnCount++;
+            objectName = srcObject;
+            btnCngLearnBack.style.visibility = 'visible';
+        } else if (shapeImageLearnCount == 1) {
+            img.src = srcImage1;
+            objectName = srcObject1;
+            shapeImageLearnCount++;
+
+        } else if (shapeImageLearnCount == 2) {
+            img.src = srcImage2;
+            objectName = srcObject2;
+            shapeImageLearnCount++;
+        } else if (shapeImageLearnCount == 3) {
+            img.src = srcImage3;
+            objectName = srcObject3;
+            btnCngLearnNext.style.visibility = 'hidden';
+        }
+
+    });
+
+    btnTest.addEventListener('click',()=>{
+         let text = document.querySelector('#test-input').value;
+        // alert('Success');
+       console.log(objectName);
+       console.log(text);
+       if(objectName == text.toLowerCase()){
+           alert('Success');
+       }
+       else
+           alert('Failed')
+    });
+
+    btnCngLearnBack.addEventListener('click', () => {
+        if (shapeImageLearnCount == 3) {
+            img.src = srcImage3;
+            shapeImageLearnCount--;
+
+        } else if (shapeImageLearnCount == 2) {
+            img.src = srcImage2;
+            shapeImageLearnCount--;
+
+        } else if (shapeImageLearnCount == 1) {
+            img.src = srcImage1;
+            shapeImageLearnCount--;
+        } else if (shapeImageLearnCount == 0) {
+            img.src = srcImage;
+            btnCngLearnBack.style.visibility = 'hidden';
+            btnCngLearnNext.style.visibility = 'visible';
+        }
+    })
+
+
+</script>
 
 </body>
 

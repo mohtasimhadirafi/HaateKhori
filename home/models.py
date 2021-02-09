@@ -8,12 +8,14 @@ import cv2
 from _collections import defaultdict
 import random
 
-functionDict = defaultdict(list)
+
 
 # Create your models here.
 class ObjectDetection(models.Model):
 
-    image = models.ImageField(upload_to='images/', null=True)
+    functionDict = defaultdict()
+
+    image = models.ImageField(upload_to='', null=True)
 
     filename = models.TextField(max_length=500)
     objectName = models.CharField(max_length=100)
@@ -36,7 +38,7 @@ class ObjectDetection(models.Model):
         functionDict = work(myImage)
 
 
-        for i in functionDict.keys():
+        for i in functionDict:
             print('dictionary')
             print(i)
             print('before initialization')

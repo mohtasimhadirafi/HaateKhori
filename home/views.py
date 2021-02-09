@@ -95,4 +95,7 @@ def surrounding_shape_level0_learn(request):
     return render(request, 'know_your_surroundings.html')
 
 def identifyObjectLevel0(request):
-    return render(request,'identifyObjectLevel0.html')
+    table_data = serializers.serialize("json", ObjectDetection.objects.all())
+    print(type(table_data))
+    context = {'data': json.dumps(table_data)}
+    return render(request,'identifyObjectLevel0.html',context)

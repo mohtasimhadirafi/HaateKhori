@@ -1,6 +1,13 @@
 body {
     background-color: black;
+    overflow: hidden;
 
+}
+
+#form-identify{
+    position: relative;
+    top: -960px;
+    left: 790px;
 }
 
 #label-font{
@@ -98,11 +105,26 @@ body {
     left: 50px;
 }
 
+#learn-select{
+    position: relative;
+    top: -530px;
+    left: 50px;
+    opacity: .6;
+}
+
 #identify-select{
     position: relative;
     top: -520px;
     left: 50px;
-    opacity: .8;
+    opacity: .7;
+
+}
+
+#identify-select-active{
+    position: relative;
+    top: -520px;
+    left: 50px;
+    opacity: 1;
 
 }
 

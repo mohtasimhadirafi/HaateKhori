@@ -1,0 +1,89 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	font-family: Gotham Rounded;
+}
+
+:root {
+	--hue-neutral: 200;
+	--hue-wrong: 0;
+	--hue-correct: 145;
+}
+
+
+
+
+
+.container {
+    left: 399px;
+    position: absolute;
+    width: 250px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+    top: 72px;
+}
+
+.container:hover{
+	background-color: #4f4f4f;
+}
+
+.btn-grid {
+	display: grid;
+	grid-template-columns: repeat(2, auto);
+	gap: 10px;
+	margin: 20px 0;
+}
+
+.btn {
+	--hue: var(--hue-neutral);
+	border: 1px solid hsl(var(--hue), 100%, 30%);
+	background-color: hsl(var(--hue), 100%, 50%);
+	border-radius: 5px;
+	padding: 5px 10px;
+	color: white;
+	outline: none;
+}
+
+.btn:hover {
+	border-color: black;
+}
+
+.btn.correct {
+	--hue: var(--hue-correct);
+	color: black;
+}
+
+.btn.wrong {
+	--hue: var(--hue-wrong);
+}
+
+.start-btn,
+.next-btn {
+	font-size: 1.5rem;
+	font-weight: bold;
+	padding: 10px 20px;
+	background: #79aec8;
+}
+
+.start-btn,
+.next-btn:hover {
+	font-size: 1.5rem;
+	font-weight: bold;
+	padding: 10px 20px;
+	background: #6DDCBD;
+}
+
+.controls {
+	display: flex;
+	z-index: 1000;
+	justify-content: center;
+	align-items: center;
+}
+
+.hide {
+	display: none;
+}
