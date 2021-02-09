@@ -1,6 +1,13 @@
 body {
     background-color: black;
-    overflow: hidden;
+
+}
+
+#label-font{
+    position: relative;
+    top: -423px;
+    left: 855px;
+    font-size: xx-large;
 }
 
 .main {

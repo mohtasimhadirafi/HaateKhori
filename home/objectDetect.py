@@ -90,8 +90,8 @@ def work(myImage):
             color = colors[i]
             #print(label),print(boxes[i])
             image2 = cv2.resize(myImage,None, fx=.3, fy=.3)
-            cv2.rectangle(image2, (x, y), (x + w, y + h), color, 2)
-            cv2.putText(image2, label, (x, y + 20), font, 1, color, 2)
+            cv2.rectangle(image2, (x, y), (x + w, y + h), (0,255,0), 2)
+            cv2.putText(image2, label, (x, y + 20), font, 1, (0,255,0), 2)
             cv2.imwrite("static/objectImage/" + label + str(i)+ str(int(time.time())) + ".jpg", image2)
             myDict[ label +str(i)+ str(int(time.time())) + ".jpg"].append(label)
 
