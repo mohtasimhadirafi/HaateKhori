@@ -6,7 +6,7 @@ from .views import *
 
 urlpatterns = [
     #path('', image_view, name='image_upload'),
-    path('success', success, name='success'),
+    path('succeed', succeed, name='succeed'),
 ]
 
 if settings.DEBUG:

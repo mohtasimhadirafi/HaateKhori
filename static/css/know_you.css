@@ -39,9 +39,16 @@ body{
     left: 35px;
 }
 
+#select-back-deactive{
+    position: relative;
+    top: -290px;
+    left: 35px;
+    opacity: 0.7;
+}
+
 #add-image{
     position: relative;
-    top: -350px;
+    top: -340px;
     left: -83px;
     opacity: .7;
 }
@@ -53,14 +60,14 @@ body{
 
 #learn-select-active{
     position: relative;
-    top: -425px;
+    top: -420px;
     left: -230px;
     opacity: .9;
 }
 
 #identify-select{
     position: relative;
-    top: -440px;
+    top: -430px;
     left: 74px;
     opacity: .6;
 
@@ -73,11 +80,26 @@ body{
 
 #level1-choice{
     position: relative;
-    top: -300px;
+    top: -320px;
     left: 33px;
     opacity: .7;
 }
 
-#level1-choice:hover{
+#level1-choice-active:hover{
+    opacity: 0.5;
+}
+
+#level1-choice-active{
+    position: relative;
+    top: -520px;
+    left: 33px;
     opacity: 1;
 }
+
+#sub-menu-deactive{
+    position: relative;
+    top: -40px;
+    left: 20px;
+    opacity: 0.5;
+}
+

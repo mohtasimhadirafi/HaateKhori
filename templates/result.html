@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'css/result.css' %}">
+    <link rel="stylesheet" href="{% static 'css/menubar.css' %}">
+    <meta charset="UTF-8">
+    <title>Result</title>
+</head>
+<body>
+<img src="/static/faceDetection_result_dump/result.jpg" alt="result">
+<a href="{% url 'know_you_level1' %}">
+    <button > Go back</button>
+</a>
+</body>
+</html>

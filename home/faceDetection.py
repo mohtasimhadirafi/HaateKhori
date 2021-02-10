@@ -56,11 +56,16 @@ def detect_Image(encodeListKnown, familyMemberNames, img):
 
 
 # if __name__ == '__main__':
-#     familyMembersName, images = find_image_names()  # pulling out names from the images
+#     path = 'C:/Users/Ratul/PycharmProjects/HaateKhori/face_picture'
+#     imagePaths = os.listdir(path)
+#     familyMembersName, images = find_image_names(path,imagePaths)# pulling out names from the images
+#
+#
 #     encodeListKnown = findEncoding(images)  # finding encodings
 #
-#     img = cv2.imread('Ratul.jpeg')
 #
+#     img = cv2.imread('Rafi.jpg')
+#     #print(detect_Image(encodeListKnown,familyMembersName,img))
 #     cv2.imshow('img', detect_Image(encodeListKnown, familyMembersName, img))# webcam
 #
 #     cv2.waitKey(0)

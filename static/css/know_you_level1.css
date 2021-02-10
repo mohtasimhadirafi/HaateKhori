@@ -1,0 +1,107 @@
+body{
+    background-color: black;
+    overflow: hidden;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+
+#label {
+    position: relative;
+    left: 700px;
+    top: 20px;
+}
+
+#shape-back{
+    position: relative;
+    top: 70px;
+    left: -50px;
+}
+
+#sub-menu{
+    position: relative;
+    top: -40px;
+    left: 20px;
+}
+
+#shape-next-btn{
+    position: relative;
+    top: 280px;
+}
+
+#select-back{
+    position: relative;
+    top: -347px;
+    left: 35px;
+}
+
+#select-back-deactive{
+    position: relative;
+    top: -290px;
+    left: 35px;
+    opacity: 0.7;
+}
+
+#add-image{
+    position: relative;
+    top: -280px;
+    left: -83px;
+    opacity: .7;
+}
+
+#add-image:hover{
+    opacity: 1;
+
+}
+
+#learn-select-active{
+    position: relative;
+    top: -320px;
+    left: -230px;
+    opacity: .9;
+}
+
+#identify-select{
+    position: relative;
+    top: -420px;
+    left: 74px;
+    opacity: .6;
+
+}
+
+#identify-select:hover{
+    opacity: 1;
+
+}
+
+#level1-choice{
+    position: relative;
+    top: -320px;
+    left: 33px;
+    opacity: .7;
+}
+
+#level1-choice-active:hover{
+    opacity: 0.5;
+}
+
+#level1-choice-active{
+    position: relative;
+    top: -520px;
+    left: 33px;
+    opacity: 1;
+}
+
+#sub-menu-deactive{
+    position: relative;
+    top: -40px;
+    left: 20px;
+    opacity: 0.5;
+}
+
+
+
