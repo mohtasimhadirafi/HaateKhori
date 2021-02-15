@@ -36,7 +36,7 @@
                                                       src="/static/img/shape_level1_option_submenu.png" width="300"></a>
 
     </div>
-    <img id="shape-back" src="/static/img/object_learn_chair.png" width="900" height="500">
+    <img id="shape-back" src="/static/img/identifyObjectBack.png" width="900" height="500">
     <img id="learn-shape-next-btn" src="/static/img/shape_learn_next_btn.png" width="70" height="70">
     <img id="learn-shape-back-btn" src="/static/img/shape_learn_back_btn.png" width="70" height="70">
 </div>
@@ -82,62 +82,51 @@
     let btnCngLearnNext = document.querySelector('#learn-shape-next-btn');
     let btnCngLearnBack = document.querySelector('#learn-shape-back-btn');
     var shapeImageLearnCount = 0;
-    var objectName;
+    var object;
     btnCngLearnBack.style.visibility = 'hidden';
 
     btnCngLearnNext.addEventListener('click', () => {
-        if (shapeImageLearnCount == 0) {
-            img.src = srcImage;
+        if (shapeImageLearnCount < data.length) {
+            img.src = '/static/objectImage/' + data[shapeImageLearnCount].fields.filename;
+             object= data[shapeImageLearnCount].fields.objectName;
             shapeImageLearnCount++;
-            objectName = srcObject;
             btnCngLearnBack.style.visibility = 'visible';
-        } else if (shapeImageLearnCount == 1) {
-            img.src = srcImage1;
-            objectName = srcObject1;
-            shapeImageLearnCount++;
-
-        } else if (shapeImageLearnCount == 2) {
-            img.src = srcImage2;
-            objectName = srcObject2;
-            shapeImageLearnCount++;
-        } else if (shapeImageLearnCount == 3) {
-            img.src = srcImage3;
-            objectName = srcObject3;
+        }
+        else {
+            alert('No object left')
             btnCngLearnNext.style.visibility = 'hidden';
         }
 
-    });
+    })
+
+    btnCngLearnBack.addEventListener('click', () => {
+        if (shapeImageLearnCount < data.length && shapeImageLearnCount>=0) {
+            img.src = '/static/objectImage/' + data[shapeImageLearnCount].fields.filename;
+            object = data[shapeImageLearnCount].fields.objectName;
+            shapeImageLearnCount--;
+            btnCngLearnBack.style.visibility = 'visible';
+        }
+        else {
+            alert('No object left')
+            btnCngLearnBack.style.visibility = 'hidden';
+        }
+
+    })
 
     btnTest.addEventListener('click',()=>{
          let text = document.querySelector('#test-input').value;
         // alert('Success');
-       console.log(objectName);
+       console.log(object);
        console.log(text);
-       if(objectName == text.toLowerCase()){
+       if(object == text.toLowerCase()){
            alert('Success');
        }
        else
            alert('Failed')
     });
 
-    btnCngLearnBack.addEventListener('click', () => {
-        if (shapeImageLearnCount == 3) {
-            img.src = srcImage3;
-            shapeImageLearnCount--;
 
-        } else if (shapeImageLearnCount == 2) {
-            img.src = srcImage2;
-            shapeImageLearnCount--;
 
-        } else if (shapeImageLearnCount == 1) {
-            img.src = srcImage1;
-            shapeImageLearnCount--;
-        } else if (shapeImageLearnCount == 0) {
-            img.src = srcImage;
-            btnCngLearnBack.style.visibility = 'hidden';
-            btnCngLearnNext.style.visibility = 'visible';
-        }
-    })
 
 
 </script>

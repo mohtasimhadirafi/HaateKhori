@@ -21,7 +21,7 @@ from home import views
 
 urlpatterns = [
     path('', include('home.urls')),
-    path('admin/', admin.site.urls),
+    path('user/', admin.site.urls),
 ]
 if settings.DEBUG:
         urlpatterns += static(settings.MEDIA_URL,
